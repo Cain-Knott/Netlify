@@ -1,15 +1,17 @@
 body {
     font-family: sans-serif; /* Use a clean, modern font */
     margin: 0; /* Remove default margins for a clean canvas */
+    background-color: #f0f0f0; /* Light grey background color */
+    padding: 20px; /* Add some padding around the body */
 }
 
 h1, h2 {
     text-align: center; /* Centre the headings */
     color: blue; /* Dark grey colour for the text */
     font-size: xx-large;
+    border: 1px solid #ddd; /* Add border to headings */
+    padding: 10px; /* Add padding inside the headings */
 }
-
-
 
 table {
     width: 80%; /* Make the table take up 80% of the container's width */
@@ -32,49 +34,59 @@ img {
     margin: 20px auto; /* Centres the image horizontally */
     max-width: 100%; /* Ensures the image scales proportionally */
     height: auto; /* Maintains aspect ratio */
+    border: 1px solid #ddd; /* Add border to images */
 }
 
 p {
-    text-align: center; /* Centre the headings */
+    text-align: center; /* Centre the paragraphs */
     color: #333; /* Dark grey colour for the text */
+    border: 1px solid #ddd; /* Add border to paragraphs */
+    padding: 10px; /* Add padding inside the paragraphs */
 }
 
 a {
-    display: block; 
+    display: block;
     text-align: center;
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #4CAF50; /* Green */
     color: white;
     text-decoration: none; /* Remove default underline */
+    border: 1px solid #ddd; /* Add border to the link */
 }
 
-a:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
+    a:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
 
 #finance-plugin-container {
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
     max-width: 600px;
-  }
-
-  button#apply-finance-button {
-	display: block;
-	width: 200px;
-	margin: 20px auto;
-	padding: 10px 20px;
-	background-color: #4CAF50;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	font-size: 16px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
 }
 
-button#apply-finance-button:hover {
-	background-color: #45a049;
+button#apply-finance-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Add border to button */
+}
+
+    button#apply-finance-button:hover {
+        background-color: #45a049;
+    }
+
+* {
+    border: 1px solid #ddd; /* Add border to all elements */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
