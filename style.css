@@ -5,7 +5,8 @@ body {
 
 h1, h2 {
     text-align: center; /* Centre the headings */
-    color: blue; /* Dark grey colour for the text */
+    color: yellow; /* Dark grey colour for the text */
+    font-size: xx-large;
 }
 
 
