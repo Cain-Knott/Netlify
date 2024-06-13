@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/CarInfoStyle.css">
+    <title>Land Rover Range Rover Sport</title>
+</head>
+<body>
+    <header class="TopOfPage" style="position: fixed;">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="CarInfo.html" target="_blank" rel="noopener noreferrer">Land Rover Range Rover Sport</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Dream Car Awaits</h1>
+        <p>Introducing the Land Rover Range Rover Sport!</p>
+        <img src="../Images/Car.jpg" alt="Amazing Car">
+
+        <h2>Vehicle Information</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Mileage</td>
+                <td>15,000 miles</td>
+            </tr>
+            <tr>
+                <td>Registration Year</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Fuel Type</td>
+                <td>Petrol</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>Automatic</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>£25,000</td>
+            </tr>
+        </table>
+
+        <p>For more information: <a href="https://www.saxton4x4.co.uk/vehicle/land-rover-range-rover-sport-13452" target="_blank" rel="noopener noreferrer">Land Rover Range Rover Sport</a>.</p>
+
+        <button id="apply-finance-button">Apply for Finance</button>
+        <div id="finance-plugin-container"></div>
+    </main>
+
+    <script type="text/javascript" src="https://demoplugins.codeweavers.net/scripts/v1/platform/finance?ApiKey=4JgcIZ6o20hEZSbXRv"></script>
+    <script type="text/javascript" src="https://demoplugins.codeweavers.net/scripts/v1/platform/launcher?ApiKey=4JgcIZ6o20hEZSbXRv"></script>
+    <script type="text/javascript">
+        window.onload = () => {
+            codeweavers.main({
+                pluginContentDivId: 'finance-plugin-container',
+                vehicle: {
+                    identifierType: 'VRM',
+                    identifier: 'FP70FVB',
+                    type: 'Car',
+                    isNew: false,
+                    cashPrice: 25000,
+                    imageUrl: 'https://carwow-uk-1.imgix.net/stock-car-custom-images/original/f7f8ac3d-35d5-a42e-22f7-07f0d5ea5147?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1920',
+                    linkBackUrl: '/index.html',
+                    registration: {
+                        number: 'FP70FVB',
+                        date: '2022/01/12',
+                    },
+                    mileage: 15000,
+                },
+                onSuccessfulCalculation: function (quote) {
+                    initializeLauncherPlugin(quote.reference);
+                },
+            });
+        };
+
+        function initializeLauncherPlugin(quoteReference) {
+            codeweavers.launcher.apply.main({
+                pluginContentDivId: 'apply-finance-button',
+                quoteReference: quoteReference,
+            });
+        }
+    </script>
+</body>
+</html>
